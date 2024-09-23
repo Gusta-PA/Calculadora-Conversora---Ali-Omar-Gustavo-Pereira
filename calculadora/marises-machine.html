@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<!-- saved from url=(0066)file:///C:/Users/Marise%20Miranda/Downloads/Marises%20Machine.html -->
+<html lang="en">
+
+<head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="style.css">
+</head>
+
+<body style="background-color: black;">
+        <div id="container">
+                <center id="">
+
+                        <div id="div_header">
+                                <h1>Gustali Machine</h1>
+                        </div>
+
+                        <br><br>
+                        <div id="div_pergunta">
+                                <h2 style="color: white;"><u>Informe qual sistema númerico você quer converter:</u></h3>
+                                        <input type="Button" id="Decimal" onclick="AparecerDecimal()"> <b
+                                                style="color: white;">Decimal</b>
+
+                                        <input type="Button" id="Binário" onclick="AparecerBinario()"> <b
+                                                style="color: white;">Binário</b>
+
+                                        <input type="button" id="Octal" onclick="AparecerOctal()"> <b
+                                                style="color: white;">Octal</b>
+
+                                        <input type="Button" id="Hexadecimal" onclick="AparecerHexa()"><b
+                                                style="color: white;">Hexadecimal</b>
+                                        <br> <br>
+
+
+                        </div>
+                        <button onclick="Voltar()">Voltar</button>
+
+                </center>
+        </div>
+
+        <script>
+
+                function AparecerDecimal() {
+                        var Decimal = document.querySelector('input#Decimal')
+
+                        if (Decimal = true) {
+                                console.log(`${Decimal} clicou em decimal!`)
+
+                                div_pergunta.innerHTML = `
+                                        <h3 style="color: white;">Decimal</h3>
+                                         <input id="demo1" type="text" placeholder="Digite o valor em decimal">
+                        <br><br>
+                                <div id="div_conversores">
+                                        <h3 style="color: white;">Converter para:</h3>
+
+
+                                        <input onclick="aparecer_octal()" type="checkbox"><b
+                                                style="color: white;">Octal</b>
+                                        <br>
+                                        <div style="display: none; background-color: #dcdcdc; border-radius: 5px; padding: 5px; color: rgb(0, 0, 0); width: 15%; height: 30px; font-weight: 500;"
+                                                id="demo2"></div>
+
+                                        <br><br>
+
+                                        <input onclick="aparecer_hexa()" type="checkbox"><b
+                                                style="color: white;">Hexadecimal</b>
+                                        <br>
+                                        <div style="display: none; background-color: #dcdcdc; border-radius: 5px; padding: 5px; color: rgb(7, 7, 7); width: 15%; height: 30px; font-weight: 500;"
+                                                id="demo3"></div>
+
+                                        <br><br>
+
+                                        <input onclick="aparecer_bin()" type="checkbox"><b
+                                                style="color: white;">Binário</b>
+                                        <br>
+                                        <div style="display: none; background-color: #dcdcdc; border-radius: 5px; padding: 5px; color: rgb(5, 5, 5); width: 30%; height: 30px; font-weight: 500; text-align: center;"
+                                                id="demo4"></div>
+
+                                        <br><br>
+
+                                        <button onclick="DecimalConverter()">Converter</button> <br> <br>`
+                        }
+                }
+
+                function AparecerBinario() {
+                        var Binario = document.querySelector('input#Binário')
+
+                        if (Binario = true) {
+                                console.log(`clicou em Binario!`)
+
+                                div_pergunta.innerHTML = `
+                                        <h3 style="color: white;">Binário</h3>
+                                         <input id="demo1" type="text" placeholder="Digite o valor em Binário">
+                        <br><br>
+                                <div id="div_conversores">
+                                        <h3 style="color: white;">Converter para:</h3>
+
+
+                                        <input onclick="aparecer_octal()" type="checkbox"><b
+                                                style="color: white;">Octal</b>
+                                        <br>
+                                        <div style="display: none; background-color: #dcdcdc; border-radius: 5px; padding: 5px; color: rgb(0, 0, 0); width: 15%; height: 30px; font-weight: 500;"
+                                                id="demo2"></div>
+
+                                        <br><br>
+
+                                        <input onclick="aparecer_hexa()" type="checkbox"><b
+                                                style="color: white;">Hexadecimal</b>
+                                        <br>
+                                        <div style="display: none; background-color: #dcdcdc; border-radius: 5px; padding: 5px; color: rgb(7, 7, 7); width: 15%; height: 30px; font-weight: 500;"
+                                                id="demo3"></div>
+
+                                        <br><br>
+
+                                        <input onclick="aparecer_decimal()" type="checkbox"><b
+                                                style="color: white;">Decimal</b>
+                                        <br>
+                                        <div style="display: none; background-color: #dcdcdc; border-radius: 5px; padding: 5px; color: rgb(5, 5, 5); width: 30%; height: 30px; font-weight: 500; text-align: center;"
+                                                id="demo4"></div>
+
+                                        <br><br>
+
+                                        <button onclick="DecimalConverter()">Converter</button>
+                                        <br><br>`
+                        }
+                }
+
+                function AparecerOctal() {
+                        var Octal = document.querySelector('input#Octal')
+
+                        div_pergunta.innerHTML = `
+                                        <h3 style="color: white;">Octal</h3>
+                                         <input id="demo1" type="text" placeholder="Digite o valor em Octal">
+                        <br><br>
+                                <div id="div_conversores">
+                                        <h3 style="color: white;">Converter para:</h3>
+
+
+                                        <input onclick="aparecer_bin()" type="checkbox"><b
+                                                style="color: white;">Binario</b>
+                                        <br>
+                                        <div style="display: none; background-color: #dcdcdc; border-radius: 5px; padding: 5px; color: rgb(0, 0, 0); width: 15%; height: 30px; font-weight: 500;"
+                                                id="demo2"></div>
+
+                                        <br><br>
+
+                                        <input onclick="aparecer_hexa()" type="checkbox"><b
+                                                style="color: white;">Hexadecimal</b>
+                                        <br>
+                                        <div style="display: none; background-color: #dcdcdc; border-radius: 5px; padding: 5px; color: rgb(7, 7, 7); width: 15%; height: 30px; font-weight: 500;"
+                                                id="demo3"></div>
+
+                                        <br><br>
+
+                                        <input onclick="aparecer_decimal()" type="checkbox"><b
+                                                style="color: white;">Decimal</b>
+                                        <br>
+                                        <div style="display: none; background-color: #dcdcdc; border-radius: 5px; padding: 5px; color: rgb(5, 5, 5); width: 30%; height: 30px; font-weight: 500; text-align: center;"
+                                                id="demo4"></div>
+                                                
+                                        <br><br>
+                                        <button onclick="OctalConverter()">Converter</button>
+                                        <br><br>`
+                }
+
+                function AparecerHexa() {
+                        var Hexadecimal = document.querySelector('input#Hexadecimal')
+
+                        div_pergunta.innerHTML = `
+                                        <h3 style="color: white;">Hexadecimal</h3>
+                                         <input id="demo1" type="text" placeholder="Digite o valor em Hexadecimal">
+                        <br><br>
+                                <div id="div_conversores">
+                                        <h3 style="color: white;">Converter para:</h3>
+
+
+                                        <input onclick="aparecer_bin()" type="checkbox"><b
+                                                style="color: white;">Binario</b>
+                                        <br>
+                                        <div style="display: none; background-color: #dcdcdc; border-radius: 5px; padding: 5px; color: rgb(0, 0, 0); width: 15%; height: 30px; font-weight: 500;"
+                                                id="demo2"></div>
+
+                                        <br><br>
+
+                                        <input onclick="aparecer_octal()" type="checkbox"><b
+                                                style="color: white;">Octal</b>
+                                        <br>
+                                        <div style="display: none; background-color: #dcdcdc; border-radius: 5px; padding: 5px; color: rgb(7, 7, 7); width: 15%; height: 30px; font-weight: 500;"
+                                                id="demo3"></div>
+
+                                        <br><br>
+
+                                        <input onclick="aparecer_decimal()" type="checkbox"><b
+                                                style="color: white;">Decimal</b>
+                                        <br>
+                                        <div style="display: none; background-color: #dcdcdc; border-radius: 5px; padding: 5px; color: rgb(5, 5, 5); width: 30%; height: 30px; font-weight: 500; text-align: center;"
+                                                id="demo4"></div>
+
+                                        <br><br>
+
+                                        <button onclick="HexadecimalConverter()">Converter</button> <br><br>`
+                }
+
+                function Voltar() {
+
+                        div_pergunta.innerHTML = `<h2 style="color: white;"><u>Informe qual sistema númerico você quer converter:</u></h3>
+                                        <input type="Button" id="Decimal" onclick="AparecerDecimal()"> <b style="color: white;">Decimal</b>
+
+                                        <input type="Button" id="Binário" onclick="AparecerBinario()"> <b style="color: white;">Binário</b>
+
+                                        <input type="button" id="Octal" onclick="AparecerOctal()"> <b style="color: white;">Octal</b>
+
+                                        <input type="Button" id="Hexadecimal" onclick="AparecerHexa()"><b style="color: white;">Hexadecimal</b>
+                                        <br> <br>`
+
+                }
+                function DecimalConverter() {
+
+                        var decimal = Number(demo1.value);
+
+                        let octal = decimal.toString(8);
+
+                        let hexadecimal = decimal.toString(16);
+
+                        let binaria = decimal.toString(2);
+
+                        console.log(decimal);
+                        console.log(octal);
+                        console.log(hexadecimal);
+                        console.log(binaria);
+
+                        document.getElementById("demo1").innerHTML = ` ${decimal}`;
+                        document.getElementById("demo2").innerHTML = ` ${octal}`;
+                        document.getElementById("demo3").innerHTML = ` ${hexadecimal}`;
+                        document.getElementById("demo4").innerHTML = ` ${binaria}`;
+
+
+                }
+
+                function BinarioConverter() {
+                        var binaria = parseInt(demo1.value, 2);
+                        let octal = binaria.toString(8);
+                        let hexadecimal = binaria.toString(16);
+                        let decimal = binaria.toString(10);
+
+                        console.log(decimal);
+                        console.log(octal);
+                        console.log(hexadecimal);
+                        console.log(binaria);
+
+                        document.getElementById("demo1").innerHTML = ` ${binaria}`;
+                        document.getElementById("demo2").innerHTML = ` ${octal}`;
+                        document.getElementById("demo3").innerHTML = ` ${hexadecimal}`;
+                        document.getElementById("demo4").innerHTML = ` ${decimal}`;
+
+                }
+
+                function HexadecimalConverter() {
+                        var hexadecimal = parseInt(demo1.value, 16);
+                        let octal = hexadecimal.toString(8);
+                        let binaria = hexadecimal.toString(2);
+                        let decimal = hexadecimal.toString(10);
+
+                        console.log(decimal);
+                        console.log(octal);
+                        console.log(hexadecimal);
+                        console.log(binaria);
+
+                        document.getElementById("demo1").innerHTML = ` ${hexadecimal}`;
+                        document.getElementById("demo2").innerHTML = ` ${octal}`;
+                        document.getElementById("demo3").innerHTML = ` ${binaria}`;
+                        document.getElementById("demo4").innerHTML = ` ${decimal}`;
+                }
+                function OctalConverter() {
+                        var octal = parseInt(demo1.value, 8);
+                        let binaria = octal.toString(2);
+                        let hexadecimal = octal.toString(16);
+                        let decimal = octal.toString(10);
+
+                        console.log(decimal);
+                        console.log(octal);
+                        console.log(hexadecimal);
+                        console.log(binaria);
+
+                        document.getElementById("demo1").innerHTML = ` ${octal}`;
+                        document.getElementById("demo2").innerHTML = ` ${binaria}`;
+                        document.getElementById("demo3").innerHTML = ` ${hexadecimal}`;
+                        document.getElementById("demo4").innerHTML = ` ${decimal}`;
+                }
+
+                function aparecer_bin() {
+                        demo4.style.display = 'block'
+                }
+
+                function aparecer_hexa() {
+                        demo3.style.display = 'block'
+                }
+
+                function aparecer_octal() {
+                        demo2.style.display = 'block'
+                }
+                function aparecer_decimal() {
+                        demo1.style.display = 'block'
+                }
+                document.bgColor = "#00ffff";
+        </script>
+</body>
+
+</html>

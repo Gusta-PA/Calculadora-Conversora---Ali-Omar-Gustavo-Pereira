@@ -1,0 +1,29 @@
+.body{
+    font-family: h3;
+}
+#container{
+    border-style: solid;
+    border-color: rgb(255, 255, 255);
+    border-width: 2px;
+    border-radius: 30px;
+    height: 550px;
+    width: 1050px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-image: url(https://i.pinimg.com/564x/0c/b3/db/0cb3db9f0e20357445ddc3a5b6d79c93.jpg);
+}
+
+#div_header{
+    background-color: black;
+    color: white;
+    border-color: white;
+    padding: 1px;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+}
+
+#bg_img{
+    filter: blur();
+}
